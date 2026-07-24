@@ -1,0 +1,19 @@
+# toMarkdown — Blueprint de deploy no Render (https://render.com).
+# Roda o backend Python nativo (sem Docker), que também serve o frontend.
+# O Render injeta a variável PORT em tempo de execução; o app.py já a lê.
+
+services:
+  - type: web
+    name: tomarkdown
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.5"
+      # Defina o valor no painel do Render (Environment) — NÃO comite a senha.
+      - key: TOMARKDOWN_PASSWORD
+        sync: false
+      - key: TOMARKDOWN_USER
+        value: admin

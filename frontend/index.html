@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <title>toMarkdown — conversor local</title>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>to<span>Markdown</span></h1>
+      <p>Converta PDF, Word, Excel, PowerPoint, imagens e HTML para Markdown — 100% no seu equipamento.</p>
+    </header>
+
+    <section id="drop" class="drop" tabindex="0" aria-label="Área para soltar arquivos">
+      <input id="fileInput" type="file" multiple
+             accept=".pdf,.docx,.doc,.xlsx,.xls,.csv,.pptx,.ppt,.html,.htm,.txt,.png,.jpg,.jpeg,.webp" hidden />
+      <div class="drop-inner">
+        <div class="drop-icon">↓</div>
+        <p><strong>Arraste arquivos aqui</strong> ou clique para escolher</p>
+        <small>PDF · DOCX · XLSX · PPTX · imagens · HTML — até 50&nbsp;MB</small>
+      </div>
+    </section>
+
+    <section id="results" class="results" hidden></section>
+  </main>
+
+  <template id="cardTpl">
+    <article class="card">
+      <div class="card-head">
+        <span class="card-name"></span>
+        <span class="card-status"></span>
+      </div>
+      <pre class="card-preview" hidden></pre>
+      <div class="card-actions" hidden>
+        <button class="btn copy">Copiar</button>
+        <button class="btn download">Baixar .md</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

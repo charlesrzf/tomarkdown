@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Ambiente / segredos
+.env
+
+# Editores / SO
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
