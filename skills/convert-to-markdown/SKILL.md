@@ -1,21 +1,19 @@
 ---
 name: convert-to-markdown
 description: >-
-  Generate Markdown (.md) FILES from documents — PDF, Word (.docx), Excel
-  (.xlsx), PowerPoint (.pptx), images, HTML, CSV, EPUB and more — using
-  Microsoft's MarkItDown, running locally so the documents' contents never enter
-  context (minimal tokens). Use this whenever the goal is to PRODUCE markdown
-  output files from documents: converting one file to .md, batch-converting a
-  whole folder or many files at once, exporting a spreadsheet or slide deck as
-  markdown, or building a .md corpus for a repo, docs site, or RAG/LLM pipeline.
-  Trigger even without the words "MarkItDown" or "convert" — e.g. "get these PDFs
-  as markdown files", "turn our Word docs into .md to migrate to Docusaurus",
-  "dump these invoices into one markdown file each", "I need .md versions of
-  everything in this folder". Do NOT use it when the user wants to read,
-  summarize, extract data from, translate, or answer questions ABOUT a document
-  (that needs the content in context — read the file directly or use the built-in
-  pdf/docx/xlsx skills), nor for the reverse direction (markdown → PDF/DOCX),
-  merging PDFs, extracting images, or creating brand-new documents.
+  Generate Markdown (.md) FILES from documents — PDF, Word, Excel, PowerPoint,
+  images, HTML, CSV, EPUB and more — using Microsoft's MarkItDown, running
+  locally so the documents' contents never enter context (minimal tokens). Use
+  whenever the goal is to PRODUCE markdown files from documents: converting one
+  file to .md, batch-converting a whole folder or many files at once, or building
+  a .md corpus for a repo, docs site, or RAG pipeline. Trigger even without the
+  words "MarkItDown" or "convert" — e.g. "get these PDFs as markdown files",
+  "turn our Word docs into .md for Docusaurus", "I need .md versions of
+  everything in this folder". Do NOT use it to read, summarize, extract data
+  from, translate, or answer questions ABOUT a document (that needs the content
+  in context — read it directly or use the built-in pdf/docx/xlsx skills), nor
+  for the reverse direction (markdown → PDF/DOCX), merging PDFs, or extracting
+  images.
 ---
 
 # Convert to Markdown
