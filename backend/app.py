@@ -28,7 +28,10 @@ SUPPORTED = {
 }
 MAX_BYTES = 50 * 1024 * 1024  # 50 MB
 
-FRONTEND_DIR = (Path(__file__).resolve().parent.parent / "frontend")
+# Pasta do frontend: por padrão ../frontend, mas pode ser sobrescrita via
+# TOMARKDOWN_FRONTEND (usado pelo app desktop empacotado, onde o caminho muda).
+_env_frontend = os.environ.get("TOMARKDOWN_FRONTEND")
+FRONTEND_DIR = Path(_env_frontend) if _env_frontend else (Path(__file__).resolve().parent.parent / "frontend")
 
 app = FastAPI(title="toMarkdown", version="1.0.0")
 
